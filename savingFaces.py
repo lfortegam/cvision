@@ -1,7 +1,13 @@
 import cv2
 import os
+from datetime import datetime
 
-facesFolder = 'faces'
+now = datetime.now() # current date and time
+
+date_time = now.strftime("%Y%m%d_%H%M%S")
+print("time:",date_time)
+
+facesFolder = 'faces/'+date_time
 
 if not os.path.exists(facesFolder):
     print('Carpeta creada: '+facesFolder)
